@@ -14,7 +14,7 @@ function VideoPlayer({ sendVideoTitle, sendVideoState, sendCurrentTime, sendDura
 
     window.onYouTubeIframeAPIReady = () => {
       player.current = new window.YT.Player('video-player', {
-        videoId: 'j6dymA2wfRM',
+        videoId: '13tJwSF6ACQ',
         events: {
           onReady: onPlayerReady,
           onStateChange: onPlayerStateChange

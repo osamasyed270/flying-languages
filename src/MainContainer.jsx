@@ -50,6 +50,8 @@ function MainContainer() {
         setPlaybackSpeed(data)
     }
 
+    
+
   return (
     <div className="main-container">
         <div className="main-container-left">
@@ -65,8 +67,10 @@ function MainContainer() {
             <TranslatedCaptions />
 
             {/* Show the OriginalCaptions Component according to the window height */}
-            {(windowHeight > 550 && windowWidth > 700) 
-            ? (<OriginalCaptions />) : (<></>)}
+            {(windowHeight > 550 && windowWidth > 700) ? 
+            <OriginalCaptions 
+                videoCurrentTime={currentTime} 
+            /> : <></>}
         </div>
         <div className="main-container-right">
             <Tabs>
@@ -79,11 +83,16 @@ function MainContainer() {
                     sendPlaybackSpeed={handlePlaybackSpeed} 
                     togglePlayPauseRef={togglePlayPauseRef} 
                 />
-                <LessonTab tabTitle="Lesson" videoState={videoState} togglePlayPauseRef={togglePlayPauseRef} />
+                <LessonTab tabTitle="Lesson" 
+                    videoState={videoState} 
+                    togglePlayPauseRef={togglePlayPauseRef} 
+                />
 
                 {/* Show the OriginalCaptions Component according to the window height */}
-                {(windowHeight < 550 && windowWidth > 700) || (windowHeight > 550 && windowWidth < 700) || (windowHeight < 550 && windowWidth < 700)
-                ? (<OriginalCaptions tabTitle="Original Captions" />) : (<></>)}
+                {(windowHeight < 550 && windowWidth > 700) || (windowHeight > 550 && windowWidth < 700) || (windowHeight < 550 && windowWidth < 700) ? 
+                <OriginalCaptions tabTitle="Original Captions" 
+                    videoCurrentTime={currentTime} 
+                /> : <></>}
             </Tabs>
         </div>
       </div>

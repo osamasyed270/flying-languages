@@ -318,6 +318,14 @@ body {
   line-height: 30px;
   overflow-y: auto;
 }
+.main-container .original-caption-container .original-caption-inner span div {
+  display: inline;
+}
+.main-container .original-caption-container .original-caption-inner span .active {
+  color: rgb(0, 204, 255);
+  text-decoration: underline;
+  font-weight: 700;
+}
 
 @media (max-width: 1000px) {
   .main-container .main-container-right .tabs-container .tabs-content .lesson-tab-container .lesson-tab-header {

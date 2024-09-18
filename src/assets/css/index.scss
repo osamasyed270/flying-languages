@@ -376,6 +376,21 @@ body {
             }
         }
     }
+
+    .original-caption-container {
+        .original-caption-inner {
+            span {
+                div {
+                    display: inline;
+                }
+                .active {
+                    color: rgb(0, 204, 255);
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1000px) {
